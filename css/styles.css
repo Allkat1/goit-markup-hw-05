@@ -232,6 +232,7 @@ body {
   min-width: 169px;
   height: 56px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --------buttons portfolio------- */
@@ -240,6 +241,7 @@ body {
   color: var(--links-text-color);
   padding: 12px 24px 12px 24px;
   border: 1px solid var(--border-color);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-button:hover,
@@ -247,7 +249,7 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------GOALS 2--------- */
@@ -402,7 +404,7 @@ body {
   align-items: center;
   justify-content: center;
   fill: var(--cloud-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .worker-soc-link:hover,
@@ -642,14 +644,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 300ms linear;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: 408px;
   min-height: 584px;
-  background-color: var(--navy-blue);
-  border-radius: 5px;
+  /* background-color: var(--navy-blue); */
+  background-color: rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
   padding: 30px;
-
-  /* transition-timing-function: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1) */
+  background: #fcfcfc;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .backdrop.is-hidden .modal {
@@ -657,8 +663,8 @@ body {
 }
 
 .modal-close {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border: 1px solid #999999;
   border-radius: 50%;
   margin-left: auto;
@@ -667,10 +673,27 @@ body {
   justify-content: center;
   background: var(--border-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  border: none;
 }
 
 .modal-close-icon {
   fill: var(--navy-blue);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+  fill: var(--secondary-color);
 }
 
 .is-hidden {
