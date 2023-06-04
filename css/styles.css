@@ -141,13 +141,13 @@ body {
 
 .link {
   text-decoration: none;
-  transition-property: ;
-  transition-duration: 300ms;
 }
 
 .link:hover,
 .link:focus {
   color: var(--ocean);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------HERO1--------- */
@@ -199,6 +199,8 @@ body {
   background-color: var(--ocean);
   color: var(--secondary-color);
   border: 1px solid transparent;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------button hero 1--------- */
@@ -224,6 +226,8 @@ body {
 .portfolio-button:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------GOALS 2--------- */
@@ -383,6 +387,8 @@ body {
 .worker-soc-link:hover,
 .worker-soc-link:focus {
   background-color: var(--ocean);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* CUSTOMERS */
 
@@ -421,6 +427,8 @@ body {
 .customer-link:focus {
   border-color: var(--ocean);
   color: var(--ocean);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ----------FOOTER--------- */
@@ -491,6 +499,8 @@ body {
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: #31d0aa;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-descr {
@@ -565,6 +575,32 @@ body {
 .example-link:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.example-cover-text {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--cloud-color);
+  padding: 40px 32px;
+  background-color: var(--links-text-color);
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 300ms linear;
+}
+
+.example-cover-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.portf-examples:hover .example-cover-text,
+.portf-examples:focus .example-cover-text {
+  transform: translateY(0);
 }
 
 /* =========modal======== */
@@ -603,6 +639,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--border-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-icon {
+  fill: var(--navy-blue);
 }
 
 .is-hidden {
